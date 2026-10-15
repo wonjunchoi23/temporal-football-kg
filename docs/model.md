@@ -1,6 +1,6 @@
 # The model as built (revision r0)
 
-This document describes the graph produced by `python -m football_kg build`. The design is [kg-schema.md](../kg-schema.md) (v3, in Korean). The section "Clarifications of kg-schema v3" lists every point where the build had to make that design more precise.
+This document describes the graph produced by `python -m football_kg build`. The design is [kg-schema.md](../kg-schema.md) (v3). The section "Clarifications of kg-schema v3" lists every point where the build had to make that design more precise.
 
 ```
 Player -HAS_CLAIM-> ProfileClaim -POINTS_TO-> Club | UnresolvedClub | CareerStatus        (undated profile snapshot)
@@ -145,7 +145,7 @@ The defaults are `lag = 14` days and `A_max = 34` years. The §6.3 sensitivity f
 3. **Observation fields** are versioned in a side table. The Player node shows only the current values.
 4. **Profile claims.** `ProfileClaim.stale` stays null in r0. A claim becomes stale only when a completed departure from the claimed club dated after 2026-10-08 arrives (§9).
 5. **Unreferenced sources.** All 365,128 sources are loaded; the 6,947 that nothing references have `referenced = false`.
-6. **§12 active population.** It uses age **<** A_max. The kg-schema text says "이하" (≤), but the published 16,517 / 16,139 use "<".
+6. **§12 active population.** It uses age **<** A_max. The kg-schema text says "at most" (≤), but the published 16,517 / 16,139 use "<".
 7. **§13.** The "625 players whose last event is a status but whose profile names a club" is **626** under the same-day order. Player 832896 has a free transfer and then a without-club event on 2024-07-01.
 8. **§8 warning 4.** The legacy definition reproduces 4,338. It uses null-`end_date` memberships with pandas' unstable sort; a stable sort gives 4,336. The v3 definition, recorded in the conflict log, gives 4,443.
 9. **§5.2.** "Players with events" counts players with a completed or planned event: 1,924 in the local cache. Two players there have only events of unknown temporal status.

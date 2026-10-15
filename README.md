@@ -1,6 +1,6 @@
 # Football temporal knowledge graph
 
-A temporal knowledge graph of the club careers of 40,706 football players whose primary citizenship is one of the FIFA top-50 countries. It is built from a Transfermarkt-derived relational release (`final_v3`, 2026-10-08) and implements the design in [kg-schema.md](kg-schema.md) (v3, in Korean).
+A temporal knowledge graph of the club careers of 40,706 football players whose primary citizenship is one of the FIFA top-50 countries. It is built from a Transfermarkt-derived relational release (`final_v3`, 2026-10-08) and implements the design in [kg-schema.md](kg-schema.md) (v3).
 
 The graph answers **"where did player *p* play on date *t*, how sure is that, and why?"** Every answer comes with:
 
@@ -89,7 +89,7 @@ Keep in mind:
 | Document | Contents |
 |---|---|
 | [docs/model.md](docs/model.md) | The model as built: labels, properties, time model, grades, versioning, provenance, constraints, and every clarification of kg-schema v3 |
-| [kg-schema.md](kg-schema.md) | The agreed design, v3 (Korean) |
+| [kg-schema.md](kg-schema.md) | The agreed design, v3 |
 | [dataset-description.md](dataset-description.md) | The input dataset, table by table |
 | [dataset/README.md](dataset/README.md) | The release's own notes and per-table limitations |
 | [build/r0/reports/validation_report.md](build/r0/reports/validation_report.md) | Every check with its expected and actual value |
