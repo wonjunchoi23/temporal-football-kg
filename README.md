@@ -9,60 +9,60 @@ The graph answers **"where did player *p* play on date *t*, how sure is that, an
 - a certainty grade
 - the source records behind it
 
-New information becomes a new revision instead of overwriting the old one: changed events, spells and profile claims get new versions, and each revision keeps its own directory. Earlier states of the KG can therefore be queried again.
-
-Release **r0** (built 2026-10-12) contains:
+This repository holds the built KG (revision **r0**, built 2026-10-12), its input dataset and the documentation. The Python package that built the KG (`football_kg`) is not included. Everything here can be read with pandas or any other Parquet reader.
 
 | | Count |
 |---|---:|
 | Nodes | 712,203 (Player 40,706 · TransferEvent 137,776 · Spell 113,379 · Source 365,128 · Club 13,599 · …) |
 | Relationships | 2,849,958 (SUPPORTED_BY 1,523,356 provenance links · FOR_PLAYER/FROM/TO · HAS_SPELL/AT/STARTED_BY/ENDED_BY · …) |
-| Validation | 182 build and validation checks recompute the kg-schema.md v3 numbers from the built graph, and all pass. The derivation also matches the reference scripts spell by spell. |
+| Validation | 182 build and validation checks recompute the kg-schema.md v3 numbers from the built graph, and all pass ([validation report](build/r0/reports/validation_report.md)). |
 
-## Quick start
-
-### 1. Get the files
-
-Clone the repository. Everything is in it (about 185 MB):
+## What is in this repository
 
 | Folder | Contents |
 |---|---|
-| `build/r0/kg/` | the KG as Parquet tables (nodes, edges, side tables) and `manifest.json` with each file's sha256 |
-| `build/r0/reports/` | the build checks and the validation report |
-| `build/r0/eval/` | the evaluation material: answer timelines, gold pool, verification sample, QA items |
-| `dataset-gz/` | the 13 input CSVs, gzip-compressed (two exceed GitHub's 100 MB limit uncompressed), for rebuilding |
+| `build/r0/kg/` | The KG: one Parquet file per node label (`nodes/`), one per edge type and endpoint-label pair (`edges/`), the side tables (`tables/`), and `manifest.json` with the rows, columns and sha256 of each file |
+| `build/r0/eval/` | `answer_timeline.parquet` (the precomputed answers, see below), the gold pool, 1,000 QA items and a verification sample |
+| `build/r0/reports/` | The build checks and the validation report |
+| `dataset/` | The input release's documentation: README, schema, data dictionary, statistics, build manifest and checksums |
+| `dataset-gz/` | The 13 input CSVs, gzip-compressed (two exceed GitHub's 100 MB file limit uncompressed) |
+| `docs/`, `kg-schema.md`, `dataset-description.md` | The documentation (see below) |
 
-### 2. Query in Python (no database needed)
+## Quick start (pandas only)
 
 ```bash
-pip install -e .                                    # Python >= 3.10 (pandas, pyarrow, numpy)
-python -m football_kg asof 373714 2026-03-01        # JSON answer
-python -m football_kg context 373714 2026-03-01     # the text block given to an LLM (kg-schema §6.6)
+pip install pandas pyarrow
 ```
 
 ```python
-from football_kg.kg import KG
-from football_kg.query.asof import AsOfEngine
+import pandas as pd
 
-engine = AsOfEngine(KG.load("build/r0"))            # lag=14 days, a_max=34 by default
-answer = engine.as_of("373714", "2026-03-01")
-answer["club_id"], answer["registered_club_id"], answer["category"]   # ('17425', '531', 'INFERRED_R3')
+players = pd.read_parquet("build/r0/kg/nodes/Player.parquet")
+clubs = pd.read_parquet("build/r0/kg/nodes/Club.parquet")      # club_id, name, aliases, ...
+spells = pd.read_parquet("build/r0/kg/nodes/Spell.parquet")    # who was at which club, from when to when
+
+# "Where did player p play on date t?"
+t = pd.read_parquet("build/r0/eval/answer_timeline.parquet")
+day = pd.Timestamp("2026-03-01")
+start, end = pd.to_datetime(t.seg_from), pd.to_datetime(t.seg_to)
+a = t[(t.player_id == "373714") & (start <= day) & (end.isna() | (day < end))]
+a[["club_id", "registered_club_id", "category"]]
+# 17425 (Internacional de Bogotá, on loan), 531 (Caracas FC), INFERRED_R3
 ```
 
-More examples, including batch queries and answer timelines, are in [docs/queries.md](docs/queries.md).
+- `answer_timeline.parquet` holds the answer for every date as segments `[seg_from, seg_to)`; an empty `seg_to` means "until further notice". It covers the 18,372 players with at least one spell and uses the default parameters (lag 14 days, A_max 34 years). A player who is not in it gets `NONE` on every date.
+- `answer_kind` is `club`, `status` (without club, retired, career break or ban; see `status_code`) or `none`. On a loan, `club_id` is the club the player played for and `registered_club_id` the parent club.
+- Club names are in `Club.parquet` (`club_id`, `name`). Status IDs (`at_id` of a status answer) are in `CareerStatus.parquet`.
+- The rules behind the answers are in [docs/model.md](docs/model.md) ("As-of rules"). The KG stores the spells and events; the answers were computed from them by the `football_kg` package.
 
-### 3. Rebuild from the dataset
+To restore the input CSVs:
 
 ```bash
-for f in dataset-gz/*.csv.gz; do gunzip -c "$f" > "dataset/$(basename "$f" .gz)"; done   # restore the 13 CSVs
-(cd dataset && sha256sum --check SHA256SUMS)              # they match the release checksums
-python -m football_kg build --out build/rebuild           # about 40 s; build/r0 stays untouched
-python -m football_kg validate build/rebuild              # build/rebuild/reports/validation_report.md
-python -m football_kg eval --build-dir build/rebuild      # build/rebuild/eval
-pytest && pytest -m slow                                  # unit tests, then full-data tests (about 10 min)
+for f in dataset-gz/*.csv.gz; do gunzip -c "$f" > "dataset/$(basename "$f" .gz)"; done
+(cd dataset && sha256sum --check SHA256SUMS)    # the 13 CSVs and data_dictionary.csv: OK
 ```
 
-Build into a separate folder as above. A Parquet file records the pyarrow version that wrote it, so a rebuild with other library versions differs byte for byte from the committed `build/r0`. The table contents are the same, except the code version (git commit) recorded on the Revision node.
+`dataset/data_dictionary.csv` defines every column, and [dataset-description.md](dataset-description.md) describes the tables. `fact_sources.csv` (1.46M rows) and `source_documents.csv` (365k rows) are large; load them with pyarrow or in chunks.
 
 ## Reading the answers
 
@@ -89,23 +89,12 @@ Keep in mind:
 | Document | Contents |
 |---|---|
 | [docs/model.md](docs/model.md) | The model as built: labels, properties, time model, grades, versioning, provenance, constraints, and every clarification of kg-schema v3 |
-| [docs/queries.md](docs/queries.md) | Python query examples |
-| [docs/updates.md](docs/updates.md) | Update batches (kg-schema §9): format, rules, revisions and time travel |
 | [kg-schema.md](kg-schema.md) | The agreed design, v3 (Korean) |
 | [dataset-description.md](dataset-description.md) | The input dataset, table by table |
-| [reference/schema_v3](reference/schema_v3) | The scripts that produced the kg-schema v3 numbers (used as a test oracle) |
-
-## Repository layout
-
-```
-src/football_kg/   build/ (S1-S7 pipeline) · query/ (as-of, timeline, context) · update/ (§9) · evalset.py · validate.py · cli.py
-tests/             rule tests on synthetic careers + slow full-data tests (reference parity, determinism, §9 scenarios)
-reference/         the scripts behind the kg-schema v3 numbers (test oracle; not edited)
-build/r0/          the built KG (kg/), its reports and the evaluation material (eval/)
-dataset/           final_v3 documentation and checksums (restore the CSVs from dataset-gz/, see Quick start)
-dataset-gz/        the 13 final_v3 CSVs, gzip-compressed
-```
+| [dataset/README.md](dataset/README.md) | The release's own notes and per-table limitations |
+| [build/r0/reports/validation_report.md](build/r0/reports/validation_report.md) | Every check with its expected and actual value |
+| [docs/queries.md](docs/queries.md), [docs/updates.md](docs/updates.md) | The query API and the update batches of the `football_kg` package that built this KG (the package is not in this repository) |
 
 ## Data and attribution
 
-The data come from Transfermarkt, via the transfermarkt-datasets project and the Transfermarkt API, and contain personal data of real people (names, birth dates and birthplaces). This repository and its releases are for academic use within the course. Do not redistribute them publicly.
+The data come from Transfermarkt, via the transfermarkt-datasets project and the Transfermarkt API, and contain personal data of real people (names, birth dates and birthplaces). This repository is for academic use within the course. Do not redistribute it publicly.
