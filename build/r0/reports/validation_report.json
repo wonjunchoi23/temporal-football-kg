@@ -1,0 +1,2879 @@
+{
+ "build_checks": [
+  {
+   "id": "input.checksums_verified",
+   "section": "S1",
+   "expected": 14,
+   "actual": 14,
+   "ok": true,
+   "hard": true,
+   "note": "13 data tables + data_dictionary.csv match SHA256SUMS"
+  },
+  {
+   "id": "input.header.players",
+   "section": "S1",
+   "expected": [
+    "player_id",
+    "player_name",
+    "date_of_birth",
+    "birth_date_precision",
+    "city_of_birth",
+    "country_of_birth",
+    "country_of_citizenship",
+    "current_club_id",
+    "source_url"
+   ],
+   "actual": [
+    "player_id",
+    "player_name",
+    "date_of_birth",
+    "birth_date_precision",
+    "city_of_birth",
+    "country_of_birth",
+    "country_of_citizenship",
+    "current_club_id",
+    "source_url"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.positions",
+   "section": "S1",
+   "expected": [
+    "position_id",
+    "position",
+    "sub_position"
+   ],
+   "actual": [
+    "position_id",
+    "position",
+    "sub_position"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.player_positions",
+   "section": "S1",
+   "expected": [
+    "player_id",
+    "position_id",
+    "source_url"
+   ],
+   "actual": [
+    "player_id",
+    "position_id",
+    "source_url"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.clubs",
+   "section": "S1",
+   "expected": [
+    "club_id",
+    "club_name",
+    "current_domestic_competition_id",
+    "source_url",
+    "metadata_status",
+    "club_name_scope",
+    "entity_kind",
+    "observed_names"
+   ],
+   "actual": [
+    "club_id",
+    "club_name",
+    "current_domestic_competition_id",
+    "source_url",
+    "metadata_status",
+    "club_name_scope",
+    "entity_kind",
+    "observed_names"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.leagues",
+   "section": "S1",
+   "expected": [
+    "league_id",
+    "league_name",
+    "country_id",
+    "country_name",
+    "competition_type",
+    "competition_sub_type",
+    "source_url",
+    "metadata_status"
+   ],
+   "actual": [
+    "league_id",
+    "league_name",
+    "country_id",
+    "country_name",
+    "competition_type",
+    "competition_sub_type",
+    "source_url",
+    "metadata_status"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.club_league_current",
+   "section": "S1",
+   "expected": [
+    "club_id",
+    "league_id",
+    "source_url"
+   ],
+   "actual": [
+    "club_id",
+    "league_id",
+    "source_url"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.transfer_events",
+   "section": "S1",
+   "expected": [
+    "transfer_event_id",
+    "player_id",
+    "transfer_date",
+    "transfer_date_precision",
+    "transfer_season",
+    "from_club_id",
+    "from_club_name",
+    "to_club_id",
+    "to_club_name",
+    "original_transfer_fee",
+    "membership_type",
+    "source_locator",
+    "transfer_id",
+    "transfer_url",
+    "original_fee",
+    "event_type",
+    "normalized_membership_type",
+    "source_supported_membership_type",
+    "derived_membership_type",
+    "classification_rule",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_match_status",
+    "raw_source_id",
+    "raw_event_id",
+    "raw_event_locator",
+    "raw_source_sha256",
+    "original_fee_json",
+    "raw_from_is_special",
+    "raw_to_is_special",
+    "raw_from_club_name",
+    "raw_to_club_name",
+    "raw_from_href",
+    "raw_to_href",
+    "event_temporal_status",
+    "raw_future_transfer",
+    "raw_upcoming",
+    "temporal_classification_rule",
+    "temporal_as_of_date"
+   ],
+   "actual": [
+    "transfer_event_id",
+    "player_id",
+    "transfer_date",
+    "transfer_date_precision",
+    "transfer_season",
+    "from_club_id",
+    "from_club_name",
+    "to_club_id",
+    "to_club_name",
+    "original_transfer_fee",
+    "membership_type",
+    "source_locator",
+    "transfer_id",
+    "transfer_url",
+    "original_fee",
+    "event_type",
+    "normalized_membership_type",
+    "source_supported_membership_type",
+    "derived_membership_type",
+    "classification_rule",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_match_status",
+    "raw_source_id",
+    "raw_event_id",
+    "raw_event_locator",
+    "raw_source_sha256",
+    "original_fee_json",
+    "raw_from_is_special",
+    "raw_to_is_special",
+    "raw_from_club_name",
+    "raw_to_club_name",
+    "raw_from_href",
+    "raw_to_href",
+    "event_temporal_status",
+    "raw_future_transfer",
+    "raw_upcoming",
+    "temporal_classification_rule",
+    "temporal_as_of_date"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.player_club_memberships",
+   "section": "S1",
+   "expected": [
+    "membership_id",
+    "player_id",
+    "club_id",
+    "membership_type",
+    "parent_club_id",
+    "start_date",
+    "end_date",
+    "season",
+    "start_precision",
+    "end_precision",
+    "derivation_method",
+    "source_transfer_event_id",
+    "source_id",
+    "confidence_status",
+    "source_supported_membership_type",
+    "derived_membership_type",
+    "end_source_transfer_event_id",
+    "end_source_id",
+    "end_derivation_method"
+   ],
+   "actual": [
+    "membership_id",
+    "player_id",
+    "club_id",
+    "membership_type",
+    "parent_club_id",
+    "start_date",
+    "end_date",
+    "season",
+    "start_precision",
+    "end_precision",
+    "derivation_method",
+    "source_transfer_event_id",
+    "source_id",
+    "confidence_status",
+    "source_supported_membership_type",
+    "derived_membership_type",
+    "end_source_transfer_event_id",
+    "end_source_id",
+    "end_derivation_method"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.player_current_clubs",
+   "section": "S1",
+   "expected": [
+    "current_relation_id",
+    "player_id",
+    "club_id",
+    "source_url",
+    "source_id",
+    "relation_kind",
+    "temporal_scope",
+    "start_date",
+    "end_date"
+   ],
+   "actual": [
+    "current_relation_id",
+    "player_id",
+    "club_id",
+    "source_url",
+    "source_id",
+    "relation_kind",
+    "temporal_scope",
+    "start_date",
+    "end_date"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.player_transfer_history_status",
+   "section": "S1",
+   "expected": [
+    "player_id",
+    "transfer_history_status",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_transfer_event_count",
+    "curated_transfer_event_count"
+   ],
+   "actual": [
+    "player_id",
+    "transfer_history_status",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_transfer_event_count",
+    "curated_transfer_event_count"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.source_documents",
+   "section": "S1",
+   "expected": [
+    "source_id",
+    "source_url",
+    "source_type",
+    "raw_locator",
+    "retrieved_at",
+    "content_sha256",
+    "extraction_method"
+   ],
+   "actual": [
+    "source_id",
+    "source_url",
+    "source_type",
+    "raw_locator",
+    "retrieved_at",
+    "content_sha256",
+    "extraction_method"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.fact_sources",
+   "section": "S1",
+   "expected": [
+    "entity_type",
+    "entity_id",
+    "fact_name",
+    "source_id",
+    "provenance_status"
+   ],
+   "actual": [
+    "entity_type",
+    "entity_id",
+    "fact_name",
+    "source_id",
+    "provenance_status"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.header.planned_transfer_events",
+   "section": "S1",
+   "expected": [
+    "transfer_event_id",
+    "player_id",
+    "transfer_date",
+    "transfer_season",
+    "event_temporal_status",
+    "temporal_classification_rule",
+    "raw_source_id",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_event_locator",
+    "raw_future_transfer",
+    "raw_upcoming"
+   ],
+   "actual": [
+    "transfer_event_id",
+    "player_id",
+    "transfer_date",
+    "transfer_season",
+    "event_temporal_status",
+    "temporal_classification_rule",
+    "raw_source_id",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_event_locator",
+    "raw_future_transfer",
+    "raw_upcoming"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": "CSV header equals data_dictionary.csv (names and order)"
+  },
+  {
+   "id": "input.rows.club_league_current",
+   "section": "S1",
+   "expected": 796,
+   "actual": 796,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.clubs",
+   "section": "S1",
+   "expected": 13613,
+   "actual": 13613,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.fact_sources",
+   "section": "S1",
+   "expected": 1462416,
+   "actual": 1462416,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.leagues",
+   "section": "S1",
+   "expected": 32,
+   "actual": 32,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.planned_transfer_events",
+   "section": "S1",
+   "expected": 2562,
+   "actual": 2562,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.player_club_memberships",
+   "section": "S1",
+   "expected": 110621,
+   "actual": 110621,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.player_current_clubs",
+   "section": "S1",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.player_positions",
+   "section": "S1",
+   "expected": 40238,
+   "actual": 40238,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.player_transfer_history_status",
+   "section": "S1",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.players",
+   "section": "S1",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.positions",
+   "section": "S1",
+   "expected": 13,
+   "actual": 13,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.source_documents",
+   "section": "S1",
+   "expected": 365128,
+   "actual": 365128,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.rows.transfer_events",
+   "section": "S1",
+   "expected": 137776,
+   "actual": 137776,
+   "ok": true,
+   "hard": true,
+   "note": "row count equals database_statistics.json"
+  },
+  {
+   "id": "input.planned_subset",
+   "section": "S1",
+   "expected": 2562,
+   "actual": 2562,
+   "ok": true,
+   "hard": true,
+   "note": "every planned event is a transfer_events row (never created twice)"
+  },
+  {
+   "id": "input.planned_columns_identical",
+   "section": "S1",
+   "expected": 2562,
+   "actual": 2562,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "input.planned_equals_status_planned",
+   "section": "S1",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": "planned table = transfer_events with event_temporal_status=planned"
+  },
+  {
+   "id": "player.history_status_one_per_player",
+   "section": "S2",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "node.Player",
+   "section": "§3",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "player.birth_date_precision",
+   "section": "§3",
+   "expected": {
+    "exact": 40386,
+    "year": 273,
+    "unknown": 47
+   },
+   "actual": {
+    "exact": 40386,
+    "year": 273,
+    "unknown": 47
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "player.history_coverage",
+   "section": "§3",
+   "expected": {
+    "valid_nonempty": 19190,
+    "valid_empty": 40,
+    "unavailable": 21476
+   },
+   "actual": {
+    "unavailable": 21476,
+    "valid_nonempty": 19190,
+    "valid_empty": 40
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "clubs.entity_kind",
+   "section": "§3",
+   "expected": {
+    "club": 13599,
+    "special_status": 5,
+    "unresolved_identifier": 9
+   },
+   "actual": {
+    "club": 13599,
+    "unresolved_identifier": 9,
+    "special_status": 5
+   },
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "club.team_level",
+   "section": "§3",
+   "expected": null,
+   "actual": {
+    "first_team": 8303,
+    "youth": 4659,
+    "reserve": 637
+   },
+   "ok": true,
+   "hard": false,
+   "note": "provisional name pattern; kg-schema estimate ~5,300 non-first-team IDs"
+  },
+  {
+   "id": "career_status.ids",
+   "section": "§3",
+   "expected": [
+    "123",
+    "2077",
+    "2113",
+    "515",
+    "75"
+   ],
+   "actual": [
+    "123",
+    "2077",
+    "2113",
+    "515",
+    "75"
+   ],
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "node.Country",
+   "section": "§11",
+   "expected": 53,
+   "actual": 53,
+   "ok": true,
+   "hard": true,
+   "note": "51 citizenship labels (Turkey+Türkiye merged) + 3 league-only"
+  },
+  {
+   "id": "edge.CITIZEN_OF.mapped",
+   "section": "§4",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "edge.IN_COUNTRY.mapped",
+   "section": "§4",
+   "expected": 32,
+   "actual": 32,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "player_positions.at_most_one_per_player",
+   "section": "§4",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "player.without_position",
+   "section": "§11",
+   "expected": 468,
+   "actual": 468,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "event.pointer_index_for_matched",
+   "section": "§5.1",
+   "expected": 137682,
+   "actual": 137682,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "event.one_raw_file_per_player",
+   "section": "§5.1",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "event.same_day_pointer_unique",
+   "section": "§5.1",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "event.endpoint_kinds",
+   "section": "§4",
+   "expected": "{'Club', 'CareerStatus'}",
+   "actual": "{'Club', 'CareerStatus'}",
+   "ok": true,
+   "hard": true,
+   "note": "no event touches an unresolved ID"
+  },
+  {
+   "id": "event.endpoints_known",
+   "section": "§4",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "event.temporal_status",
+   "section": "§11",
+   "expected": {
+    "completed": 135120,
+    "planned": 2562,
+    "unknown": 94
+   },
+   "actual": {
+    "completed": 135120,
+    "planned": 2562,
+    "unknown": 94
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "event.special_endpoints",
+   "section": "§4",
+   "expected": {
+    "FROM": 2444,
+    "TO": 3326
+   },
+   "actual": {
+    "FROM": 2444,
+    "TO": 3326
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "profile.matches_players_current_club",
+   "section": "S3",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "edge.POINTS_TO.by_label",
+   "section": "§4",
+   "expected": {
+    "Club": 40679,
+    "UnresolvedClub": 21,
+    "CareerStatus": 6
+   },
+   "actual": {
+    "Club": 40679,
+    "UnresolvedClub": 21,
+    "CareerStatus": 6
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "league_spell.one_per_club",
+   "section": "§8",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "league_spell.equals_clubs_competition",
+   "section": "S3",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": "club_league_current and clubs.current_domestic_competition_id agree; LeagueSpell built from the former"
+  },
+  {
+   "id": "observation.known_source_files",
+   "section": "§5.2",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "observation.players_by_source",
+   "section": "§5.2",
+   "expected": {
+    "API 2025": 11979,
+    "local cache": 2745,
+    "API 2023": 2384,
+    "API 2024": 2122
+   },
+   "actual": {
+    "API 2025": 11979,
+    "local cache": 2745,
+    "API 2023": 2384,
+    "API 2024": 2122
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "observation.api_file_horizons",
+   "section": "§5.2",
+   "expected": {
+    "API 2023": "2024-07-26",
+    "API 2024": "2026-02-27",
+    "API 2025": "2026-06-11"
+   },
+   "actual": {
+    "API 2023": "2024-07-26",
+    "API 2024": "2026-02-27",
+    "API 2025": "2026-06-11"
+   },
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "observation.local_canonical_files_unique",
+   "section": "§5.2",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "observation.local_without_retrieved_at",
+   "section": "§5.2",
+   "expected": 1,
+   "actual": 1,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "observation.local_horizon_range",
+   "section": "§5.2",
+   "expected": [
+    "2026-10-07",
+    "2026-10-08"
+   ],
+   "actual": [
+    "2026-10-07",
+    "2026-10-08"
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "observation.history_complete",
+   "section": "§5.2",
+   "expected": 17980,
+   "actual": 17980,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "observation.one_history_record_per_player",
+   "section": "§7",
+   "expected": true,
+   "actual": true,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "spell.membership_end_basis",
+   "section": "§5.1",
+   "expected": {
+    "evidence": 45403,
+    "R1": 45422,
+    "R2": 7,
+    "open": 19789
+   },
+   "actual": {
+    "R1": 45422,
+    "evidence": 45403,
+    "open": 19789,
+    "R2": 7
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "spell.status_end_basis",
+   "section": "§5.1",
+   "expected": {
+    "R1": 2123,
+    "R2": 1,
+    "open": 634
+   },
+   "actual": {
+    "R1": 2123,
+    "open": 634,
+    "R2": 1
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "spell.status_count",
+   "section": "§11",
+   "expected": 2758,
+   "actual": 2758,
+   "ok": true,
+   "hard": false,
+   "note": "status 2,553 + unknown destination 205"
+  },
+  {
+   "id": "spell.status_unknown_destination",
+   "section": "§11",
+   "expected": 205,
+   "actual": 205,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "spell.transit",
+   "section": "§5.1",
+   "expected": {
+    "membership": 29,
+    "status": 1
+   },
+   "actual": {
+    "membership": 29,
+    "status": 1
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "spell.last_confirmed_evidence",
+   "section": "§5.1",
+   "expected": {
+    "loan_out": 10629,
+    "loan_return": 9294
+   },
+   "actual": {
+    "loan_out": 10629,
+    "loan_return": 9294
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "spell.last_confirmed_total",
+   "section": "§5.1",
+   "expected": 10629,
+   "actual": 10629,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "reconcile.status_spells",
+   "section": "§11",
+   "expected": 2758,
+   "actual": 2758,
+   "ok": true,
+   "hard": false,
+   "note": "2,755 special-destination start exclusions + 3 loan returns to 75 = 2,758 status spells"
+  },
+  {
+   "id": "fact_sources.entity_types",
+   "section": "§7",
+   "expected": "{'club_league_current', 'position', 'league', 'player_transfer_history_status', 'transfer_event', 'club', 'player_current_club', 'planned_transfer_event', 'player', 'player_club_membership', 'player_position'}",
+   "actual": "{'club_league_current', 'league', 'position', 'player_transfer_history_status', 'transfer_event', 'club', 'player_current_club', 'planned_transfer_event', 'player', 'player_club_membership', 'player_position'}",
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "fact_sources.resolved",
+   "section": "§7",
+   "expected": 1462416,
+   "actual": 1462416,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "provenance.unmapped_rows",
+   "section": "§7",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "provenance.player_position_pairs_exist",
+   "section": "§7",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "edge.SUPPORTED_BY.dataset",
+   "section": "§7",
+   "expected": 1462416,
+   "actual": 1462416,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "provenance.membership_membership_start_and_type_matches_column",
+   "section": "§7",
+   "expected": 110621,
+   "actual": 110621,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "provenance.membership_membership_end_matches_column",
+   "section": "§7",
+   "expected": 45403,
+   "actual": 45403,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "provenance.membership_parent_club_id_matches_column",
+   "section": "§7",
+   "expected": 23544,
+   "actual": 23544,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "edge.SUPPORTED_BY.derived",
+   "section": "§7",
+   "expected": {
+    "status": 2758,
+    "R1": 47545,
+    "R2": 8,
+    "last_confirmed": 10629
+   },
+   "actual": {
+    "R1": 47545,
+    "last_confirmed": 10629,
+    "status": 2758,
+    "R2": 8
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "source.referenced",
+   "section": "§11",
+   "expected": {
+    "True": 358181,
+    "False": 6947
+   },
+   "actual": {
+    "True": 358181,
+    "False": 6947
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Player",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Club",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.UnresolvedClub",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.CareerStatus",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.League",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Country",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Position",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Source",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Revision",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.ProfileClaim",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.TransferEvent",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.Spell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique.LeagueSpell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.one_current_version.ProfileClaim",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique_logical_version.ProfileClaim",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.one_current_version.TransferEvent",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique_logical_version.TransferEvent",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.one_current_version.Spell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique_logical_version.Spell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.one_current_version.LeagueSpell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject1.unique_logical_version.LeagueSpell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject2.start_events_completed_matched",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject2.end_events_completed_matched",
+   "section": "§8",
+   "expected": 92956,
+   "actual": 92956,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject2.start_date_equals_valid_from",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject2.end_date_equals_valid_to",
+   "section": "§8",
+   "expected": 92956,
+   "actual": 92956,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject3.start_same_player",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject3.end_same_player",
+   "section": "§8",
+   "expected": 92956,
+   "actual": 92956,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject3.at_equals_start_to",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject3.departure_from_at",
+   "section": "§8",
+   "expected": 92948,
+   "actual": 92948,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject3.end_after_start",
+   "section": "§8",
+   "expected": 92956,
+   "actual": 92956,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject4.has_horizon",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject4.from_le_to",
+   "section": "§8",
+   "expected": 92956,
+   "actual": 92956,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject4.to_le_horizon",
+   "section": "§8",
+   "expected": 92956,
+   "actual": 92956,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject4.from_le_horizon",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject4.transit_iff_zero_length",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject5.membership_at_club",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject5.status_at_career_status",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject5.loan_parent_differs",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject5.loans_without_parent",
+   "section": "§8",
+   "expected": 3,
+   "actual": 3,
+   "ok": true,
+   "hard": false,
+   "note": "loans whose parent is a special-status ID"
+  },
+  {
+   "id": "reject5.loan_parent_is_club",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.supported.ProfileClaim",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.recorded_once.ProfileClaim",
+   "section": "§8",
+   "expected": 40706,
+   "actual": 40706,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.supported.TransferEvent",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.recorded_once.TransferEvent",
+   "section": "§8",
+   "expected": 137776,
+   "actual": 137776,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.supported.Spell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.recorded_once.Spell",
+   "section": "§8",
+   "expected": 113379,
+   "actual": 113379,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.supported.LeagueSpell",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject6.recorded_once.LeagueSpell",
+   "section": "§8",
+   "expected": 796,
+   "actual": 796,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject7.completed_le_horizon",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "reject7.planned_after_horizon",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": true,
+   "note": ""
+  },
+  {
+   "id": "warning.W1_registration_overlap",
+   "section": "§8",
+   "expected": null,
+   "actual": {
+    "pairs": 1160,
+    "players": 358
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "warning.W1_loan_overlap",
+   "section": "§8",
+   "expected": null,
+   "actual": {
+    "pairs": 32,
+    "players": 31
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "warning.W2_loan_outside_parent",
+   "section": "§8",
+   "expected": null,
+   "actual": {
+    "loans": 1327,
+    "of": 23543
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "warning.W3_multiple_league_spells",
+   "section": "§8",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "warning.W4_profile_mismatch_v3",
+   "section": "§8",
+   "expected": null,
+   "actual": {
+    "players": 4443,
+    "with_open_spell": 18357,
+    "of_which_status_spells": 627
+   },
+   "ok": true,
+   "hard": false,
+   "note": "v3 definition: latest-started open spell (incl. status, excl. unknown destination and transit)"
+  },
+  {
+   "id": "warning.W4_profile_mismatch_v1_legacy",
+   "section": "§8",
+   "expected": 4338,
+   "actual": 4338,
+   "ok": true,
+   "hard": false,
+   "note": "kg2.py definition (null end_date memberships, unstable sort by start_date)"
+  },
+  {
+   "id": "exclusions.rows_excluded",
+   "section": "S7",
+   "expected": 0,
+   "actual": 0,
+   "ok": true,
+   "hard": false,
+   "note": "r0 loads every row: 94 unknown events as TransferEvents, 6,947 unreferenced Sources with referenced=false"
+  },
+  {
+   "id": "count.nodes",
+   "section": "§11",
+   "expected": {
+    "Player": 40706,
+    "Club": 13599,
+    "UnresolvedClub": 9,
+    "CareerStatus": 5,
+    "League": 32,
+    "Country": 53,
+    "Position": 13,
+    "Source": 365128,
+    "Revision": 1,
+    "ProfileClaim": 40706,
+    "TransferEvent": 137776,
+    "Spell": 113379,
+    "LeagueSpell": 796
+   },
+   "actual": {
+    "CareerStatus": 5,
+    "Club": 13599,
+    "Country": 53,
+    "League": 32,
+    "LeagueSpell": 796,
+    "Player": 40706,
+    "Position": 13,
+    "ProfileClaim": 40706,
+    "Revision": 1,
+    "Source": 365128,
+    "Spell": 113379,
+    "TransferEvent": 137776,
+    "UnresolvedClub": 9
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "count.edges",
+   "section": "§11",
+   "expected": {
+    "HAS_CLAIM": 40706,
+    "POINTS_TO": 40706,
+    "FOR_PLAYER": 137776,
+    "FROM": 137776,
+    "TO": 137776,
+    "HAS_SPELL": 114175,
+    "AT": 113379,
+    "LOANED_FROM": 23544,
+    "STARTED_BY": 113379,
+    "ENDED_BY": 92956,
+    "IN": 796,
+    "HAS_POSITION": 40238,
+    "CITIZEN_OF": 40706,
+    "IN_COUNTRY": 32,
+    "SUPPORTED_BY": 1523356,
+    "RECORDED_IN": 292657
+   },
+   "actual": {
+    "HAS_CLAIM": 40706,
+    "POINTS_TO": 40706,
+    "FOR_PLAYER": 137776,
+    "FROM": 137776,
+    "TO": 137776,
+    "HAS_SPELL": 114175,
+    "AT": 113379,
+    "LOANED_FROM": 23544,
+    "STARTED_BY": 113379,
+    "ENDED_BY": 92956,
+    "IN": 796,
+    "HAS_POSITION": 40238,
+    "CITIZEN_OF": 40706,
+    "IN_COUNTRY": 32,
+    "SUPPORTED_BY": 1523356,
+    "RECORDED_IN": 292657
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "count.edges.AT_by_label",
+   "section": "§4",
+   "expected": {
+    "Club": 110621,
+    "CareerStatus": 2758
+   },
+   "actual": {
+    "Club": 110621,
+    "CareerStatus": 2758
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  }
+ ],
+ "validation_checks": [
+  {
+   "id": "§5.2.table",
+   "section": "§5.2",
+   "expected": {
+    "API 2023": [
+     2384,
+     2367,
+     "2024-07-26",
+     "2024-07-29"
+    ],
+    "API 2024": [
+     2122,
+     2118,
+     "2026-02-27",
+     "2026-05-03"
+    ],
+    "API 2025": [
+     11979,
+     11965,
+     "2026-06-11",
+     "2026-06-15"
+    ],
+    "local cache": [
+     2745,
+     1924,
+     "2026-10-06",
+     "2026-11-30"
+    ]
+   },
+   "actual": {
+    "API 2023": [
+     2384,
+     2367,
+     "2024-07-26",
+     "2024-07-29"
+    ],
+    "API 2024": [
+     2122,
+     2118,
+     "2026-02-27",
+     "2026-05-03"
+    ],
+    "API 2025": [
+     11979,
+     11965,
+     "2026-06-11",
+     "2026-06-15"
+    ],
+    "local cache": [
+     2745,
+     1924,
+     "2026-10-06",
+     "2026-11-30"
+    ]
+   },
+   "ok": true,
+   "hard": false,
+   "note": "players with events = players with a completed or planned event (2 local-cache players have only events of unknown temporal status)"
+  },
+  {
+   "id": "§5.2.history_incomplete",
+   "section": "§5.2",
+   "expected": {
+    "players": 1210,
+    "with_spells": 396
+   },
+   "actual": {
+    "players": 1210,
+    "with_spells": 396
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.4.farinez",
+   "section": "§6.4",
+   "expected": {
+    "2017-01-01": [
+     "Caracas FC",
+     "Caracas FC",
+     "INFERRED_R12"
+    ],
+    "2019-06-01": [
+     "Millonarios FC",
+     "Millonarios FC",
+     "CONFIRMED"
+    ],
+    "2025-06-01": [
+     "Rionegro Águilas",
+     "Caracas FC",
+     "CONFIRMED"
+    ],
+    "2026-03-01": [
+     "Internacional de Bogotá",
+     "Caracas FC",
+     "INFERRED_R3"
+    ],
+    "2026-09-01": [
+     "Internacional de Bogotá",
+     "Caracas FC",
+     "OPEN_PROFILE"
+    ]
+   },
+   "actual": {
+    "2017-01-01": [
+     "Caracas FC",
+     "Caracas FC",
+     "INFERRED_R12"
+    ],
+    "2019-06-01": [
+     "Millonarios FC",
+     "Millonarios FC",
+     "CONFIRMED"
+    ],
+    "2025-06-01": [
+     "Rionegro Águilas",
+     "Caracas FC",
+     "CONFIRMED"
+    ],
+    "2026-03-01": [
+     "Internacional de Bogotá",
+     "Caracas FC",
+     "INFERRED_R3"
+    ],
+    "2026-09-01": [
+     "Internacional de Bogotá",
+     "Caracas FC",
+     "OPEN_PROFILE"
+    ]
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.population.2020-01-01",
+   "section": "§6.5",
+   "expected": 12865,
+   "actual": 12865,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.overall.2020-01-01",
+   "section": "§6.5",
+   "expected": [
+    6612,
+    5694,
+    479,
+    5,
+    3,
+    72
+   ],
+   "actual": [
+    6612,
+    5694,
+    479,
+    5,
+    3,
+    72
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2020-01-01.API 2023",
+   "section": "§6.5",
+   "expected": [
+    1705,
+    56.5,
+    39.4,
+    3.5,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "actual": [
+    1705,
+    56.5,
+    39.4,
+    3.5,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2020-01-01.API 2024",
+   "section": "§6.5",
+   "expected": [
+    1331,
+    54.7,
+    44.0,
+    0.8,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "actual": [
+    1331,
+    54.7,
+    44.0,
+    0.8,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2020-01-01.API 2025",
+   "section": "§6.5",
+   "expected": [
+    8575,
+    49.6,
+    45.6,
+    4.3,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "actual": [
+    8575,
+    49.6,
+    45.6,
+    4.3,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2020-01-01.local cache",
+   "section": "§6.5",
+   "expected": [
+    1254,
+    53.2,
+    41.9,
+    3.3,
+    0.2,
+    0.2,
+    1.1
+   ],
+   "actual": [
+    1254,
+    53.2,
+    41.9,
+    3.3,
+    0.2,
+    0.2,
+    1.1
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.population.2023-01-01",
+   "section": "§6.5",
+   "expected": 16644,
+   "actual": 16644,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.overall.2023-01-01",
+   "section": "§6.5",
+   "expected": [
+    8255,
+    6192,
+    2007,
+    137,
+    10,
+    43
+   ],
+   "actual": [
+    8255,
+    6192,
+    2007,
+    137,
+    10,
+    43
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2023-01-01.API 2023",
+   "section": "§6.5",
+   "expected": [
+    2271,
+    56.9,
+    25.7,
+    16.6,
+    0.7,
+    0.0,
+    0.1
+   ],
+   "actual": [
+    2271,
+    56.9,
+    25.7,
+    16.6,
+    0.7,
+    0.0,
+    0.1
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2023-01-01.API 2024",
+   "section": "§6.5",
+   "expected": [
+    1868,
+    56.8,
+    39.9,
+    3.1,
+    0.1,
+    0.0,
+    0.2
+   ],
+   "actual": [
+    1868,
+    56.8,
+    39.9,
+    3.1,
+    0.1,
+    0.0,
+    0.2
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2023-01-01.API 2025",
+   "section": "§6.5",
+   "expected": [
+    10916,
+    47.1,
+    39.2,
+    12.8,
+    0.7,
+    0.0,
+    0.3
+   ],
+   "actual": [
+    10916,
+    47.1,
+    39.2,
+    12.8,
+    0.7,
+    0.0,
+    0.3
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2023-01-01.local cache",
+   "section": "§6.5",
+   "expected": [
+    1589,
+    47.8,
+    37.0,
+    11.2,
+    3.1,
+    0.4,
+    0.4
+   ],
+   "actual": [
+    1589,
+    47.8,
+    37.0,
+    11.2,
+    3.1,
+    0.4,
+    0.4
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.population.2025-01-01",
+   "section": "§6.5",
+   "expected": 17993,
+   "actual": 17993,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.overall.2025-01-01",
+   "section": "§6.5",
+   "expected": [
+    5742,
+    3889,
+    5453,
+    1214,
+    1659,
+    36
+   ],
+   "actual": [
+    5742,
+    3889,
+    5453,
+    1214,
+    1659,
+    36
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2025-01-01.API 2023",
+   "section": "§6.5",
+   "expected": [
+    2367,
+    0.0,
+    0.0,
+    0.0,
+    32.0,
+    67.8,
+    0.2
+   ],
+   "actual": [
+    2367,
+    0.0,
+    0.0,
+    0.0,
+    32.0,
+    67.8,
+    0.2
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2025-01-01.API 2024",
+   "section": "§6.5",
+   "expected": [
+    2093,
+    60.5,
+    19.9,
+    19.3,
+    0.2,
+    0.1,
+    0.0
+   ],
+   "actual": [
+    2093,
+    60.5,
+    19.9,
+    19.3,
+    0.2,
+    0.1,
+    0.0
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2025-01-01.API 2025",
+   "section": "§6.5",
+   "expected": [
+    11720,
+    33.1,
+    25.5,
+    38.5,
+    2.5,
+    0.1,
+    0.2
+   ],
+   "actual": [
+    11720,
+    33.1,
+    25.5,
+    38.5,
+    2.5,
+    0.1,
+    0.2
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2025-01-01.local cache",
+   "section": "§6.5",
+   "expected": [
+    1813,
+    32.7,
+    26.7,
+    29.4,
+    8.7,
+    2.3,
+    0.3
+   ],
+   "actual": [
+    1813,
+    32.7,
+    26.7,
+    29.4,
+    8.7,
+    2.3,
+    0.3
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.population.2026-01-01",
+   "section": "§6.5",
+   "expected": 18291,
+   "actual": 18291,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.overall.2026-01-01",
+   "section": "§6.5",
+   "expected": [
+    1852,
+    1173,
+    11751,
+    1693,
+    1799,
+    23
+   ],
+   "actual": [
+    1852,
+    1173,
+    11751,
+    1693,
+    1799,
+    23
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-01-01.API 2023",
+   "section": "§6.5",
+   "expected": [
+    2367,
+    0.0,
+    0.0,
+    0.0,
+    31.6,
+    68.2,
+    0.2
+   ],
+   "actual": [
+    2367,
+    0.0,
+    0.0,
+    0.0,
+    31.6,
+    68.2,
+    0.2
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-01-01.API 2024",
+   "section": "§6.5",
+   "expected": [
+    2114,
+    15.0,
+    5.5,
+    73.6,
+    0.4,
+    5.3,
+    0.1
+   ],
+   "actual": [
+    2114,
+    15.0,
+    5.5,
+    73.6,
+    0.4,
+    5.3,
+    0.1
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-01-01.API 2025",
+   "section": "§6.5",
+   "expected": [
+    11930,
+    10.6,
+    7.3,
+    76.7,
+    5.3,
+    0.1,
+    0.1
+   ],
+   "actual": [
+    11930,
+    10.6,
+    7.3,
+    76.7,
+    5.3,
+    0.1,
+    0.1
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-01-01.local cache",
+   "section": "§6.5",
+   "expected": [
+    1880,
+    14.6,
+    10.1,
+    55.8,
+    16.3,
+    3.0,
+    0.2
+   ],
+   "actual": [
+    1880,
+    14.6,
+    10.1,
+    55.8,
+    16.3,
+    3.0,
+    0.2
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.population.2026-09-01",
+   "section": "§6.5",
+   "expected": 18372,
+   "actual": 18372,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.overall.2026-09-01",
+   "section": "§6.5",
+   "expected": [
+    13,
+    0,
+    1396,
+    11341,
+    5607,
+    15
+   ],
+   "actual": [
+    13,
+    0,
+    1396,
+    11341,
+    5607,
+    15
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-09-01.API 2023",
+   "section": "§6.5",
+   "expected": [
+    2367,
+    0.0,
+    0.0,
+    0.0,
+    31.6,
+    68.2,
+    0.2
+   ],
+   "actual": [
+    2367,
+    0.0,
+    0.0,
+    0.0,
+    31.6,
+    68.2,
+    0.2
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-09-01.API 2024",
+   "section": "§6.5",
+   "expected": [
+    2117,
+    0.0,
+    0.0,
+    0.0,
+    12.4,
+    87.6,
+    0.0
+   ],
+   "actual": [
+    2117,
+    0.0,
+    0.0,
+    0.0,
+    12.4,
+    87.6,
+    0.0
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-09-01.API 2025",
+   "section": "§6.5",
+   "expected": [
+    11965,
+    0.0,
+    0.0,
+    0.0,
+    82.9,
+    17.1,
+    0.1
+   ],
+   "actual": [
+    11965,
+    0.0,
+    0.0,
+    0.0,
+    82.9,
+    17.1,
+    0.1
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.by_source.2026-09-01.local cache",
+   "section": "§6.5",
+   "expected": [
+    1923,
+    0.7,
+    0.0,
+    72.6,
+    21.6,
+    5.0,
+    0.1
+   ],
+   "actual": [
+    1923,
+    0.7,
+    0.0,
+    72.6,
+    21.6,
+    5.0,
+    0.1
+   ],
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.registration_overlap",
+   "section": "§6.5",
+   "expected": {
+    "2026-01-01": 281,
+    "2026-09-01": 295
+   },
+   "actual": {
+    "2026-01-01": 281,
+    "2026-09-01": 295
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.5.planned_due_open",
+   "section": "§6.5",
+   "expected": {
+    "2026-01-01": 134,
+    "2026-09-01": 2016
+   },
+   "actual": {
+    "2026-01-01": 134,
+    "2026-09-01": 2016
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.3.sensitivity",
+   "section": "§6.3",
+   "expected": {
+    "2025-01-01 lag=0 A_max=34": [
+     30.3,
+     16.0
+    ],
+    "2025-01-01 lag=14 A_max=34": [
+     30.3,
+     16.0
+    ],
+    "2025-01-01 lag=28 A_max=34": [
+     30.3,
+     16.0
+    ],
+    "2025-01-01 lag=14 A_max=36": [
+     31.4,
+     14.8
+    ],
+    "2025-01-01 lag=14 A_max=38": [
+     32.0,
+     14.3
+    ],
+    "2026-01-01 lag=0 A_max=34": [
+     64.2,
+     19.1
+    ],
+    "2026-01-01 lag=14 A_max=34": [
+     64.2,
+     19.1
+    ],
+    "2026-01-01 lag=28 A_max=34": [
+     64.2,
+     19.1
+    ],
+    "2026-01-01 lag=14 A_max=36": [
+     66.9,
+     16.5
+    ],
+    "2026-01-01 lag=14 A_max=38": [
+     68.1,
+     15.2
+    ]
+   },
+   "actual": {
+    "2025-01-01 lag=0 A_max=34": [
+     30.3,
+     16.0
+    ],
+    "2025-01-01 lag=14 A_max=34": [
+     30.3,
+     16.0
+    ],
+    "2025-01-01 lag=28 A_max=34": [
+     30.3,
+     16.0
+    ],
+    "2025-01-01 lag=14 A_max=36": [
+     31.4,
+     14.8
+    ],
+    "2025-01-01 lag=14 A_max=38": [
+     32.0,
+     14.3
+    ],
+    "2026-01-01 lag=0 A_max=34": [
+     64.2,
+     19.1
+    ],
+    "2026-01-01 lag=14 A_max=34": [
+     64.2,
+     19.1
+    ],
+    "2026-01-01 lag=28 A_max=34": [
+     64.2,
+     19.1
+    ],
+    "2026-01-01 lag=14 A_max=36": [
+     66.9,
+     16.5
+    ],
+    "2026-01-01 lag=14 A_max=38": [
+     68.1,
+     15.2
+    ]
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§6.3.near_horizon",
+   "section": "§6.3",
+   "expected": {
+    "2026-06-01 lag=0": 67.7,
+    "2026-06-01 lag=14": 7.4,
+    "2026-06-01 lag=28": 7.4,
+    "2026-09-25 lag=0": 7.6,
+    "2026-09-25 lag=14": 0.0,
+    "2026-09-25 lag=28": 0.0
+   },
+   "actual": {
+    "2026-06-01 lag=0": 67.7,
+    "2026-06-01 lag=14": 7.4,
+    "2026-06-01 lag=28": 7.4,
+    "2026-09-25 lag=0": 7.6,
+    "2026-09-25 lag=14": 0.0,
+    "2026-09-25 lag=28": 0.0
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§12.active_population",
+   "section": "§12",
+   "expected": {
+    "active": 16517,
+    "active_complete": 16139,
+    "by_source": {
+     "API 2025": 11068,
+     "API 2023": 1851,
+     "API 2024": 1845,
+     "local cache": 1753
+    }
+   },
+   "actual": {
+    "active": 16517,
+    "active_complete": 16139,
+    "by_source": {
+     "API 2025": 11068,
+     "API 2023": 1851,
+     "API 2024": 1845,
+     "local cache": 1753
+    }
+   },
+   "ok": true,
+   "hard": false,
+   "note": "age < A_max at H_p (kg-schema text says '이하'; the published numbers use '<')"
+  },
+  {
+   "id": "§12.r3_eligible_players",
+   "section": "§6.3",
+   "expected": 17972,
+   "actual": 17972,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§12.recent_strata",
+   "section": "§12",
+   "expected": {
+    "2025-07-01": {
+     "spells": 8976,
+     "players": 7922,
+     "players_by_source": {
+      "API 2025": 5926,
+      "API 2024": 1396,
+      "local cache": 600
+     }
+    },
+    "2026-01-01": {
+     "spells": 3279,
+     "players": 3212,
+     "players_by_source": {
+      "API 2025": 2450,
+      "API 2024": 390,
+      "local cache": 372
+     }
+    }
+   },
+   "actual": {
+    "2025-07-01": {
+     "spells": 8976,
+     "players": 7922,
+     "players_by_source": {
+      "API 2025": 5926,
+      "API 2024": 1396,
+      "local cache": 600
+     }
+    },
+    "2026-01-01": {
+     "spells": 3279,
+     "players": 3212,
+     "players_by_source": {
+      "API 2025": 2450,
+      "API 2024": 390,
+      "local cache": 372
+     }
+    }
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§13.players_without_spells",
+   "section": "§13",
+   "expected": 22334,
+   "actual": 22334,
+   "ok": true,
+   "hard": false,
+   "note": ""
+  },
+  {
+   "id": "§13.status_then_profile_club",
+   "section": "§13",
+   "expected": 626,
+   "actual": 626,
+   "ok": true,
+   "hard": false,
+   "note": "kg-schema/dataset docs say 625 (date-only order); 626 under the (date, order_in_day) order (player 832896: free transfer then without_club on 2024-07-01)"
+  },
+  {
+   "id": "§13.passed_planned",
+   "section": "§13",
+   "expected": {
+    "passed": 2132,
+    "may_to_sep_2026": 1997,
+    "other": 135
+   },
+   "actual": {
+    "passed": 2132,
+    "may_to_sep_2026": 1997,
+    "other": 135
+   },
+   "ok": true,
+   "hard": false,
+   "note": ""
+  }
+ ],
+ "tables": {
+  "grade_distribution": [
+   {
+    "t": "2020-01-01",
+    "population": 12865,
+    "CONFIRMED": 6612,
+    "INFERRED_R12": 5694,
+    "INFERRED_R3": 479,
+    "OPEN_PROFILE": 5,
+    "OPEN": 3,
+    "NONE": 72,
+    "registration_overlap_players": 166,
+    "planned_due_open": 0
+   },
+   {
+    "t": "2023-01-01",
+    "population": 16644,
+    "CONFIRMED": 8255,
+    "INFERRED_R12": 6192,
+    "INFERRED_R3": 2007,
+    "OPEN_PROFILE": 137,
+    "OPEN": 10,
+    "NONE": 43,
+    "registration_overlap_players": 225,
+    "planned_due_open": 0
+   },
+   {
+    "t": "2025-01-01",
+    "population": 17993,
+    "CONFIRMED": 5742,
+    "INFERRED_R12": 3889,
+    "INFERRED_R3": 5453,
+    "OPEN_PROFILE": 1214,
+    "OPEN": 1659,
+    "NONE": 36,
+    "registration_overlap_players": 273,
+    "planned_due_open": 23
+   },
+   {
+    "t": "2026-01-01",
+    "population": 18291,
+    "CONFIRMED": 1852,
+    "INFERRED_R12": 1173,
+    "INFERRED_R3": 11751,
+    "OPEN_PROFILE": 1693,
+    "OPEN": 1799,
+    "NONE": 23,
+    "registration_overlap_players": 281,
+    "planned_due_open": 134
+   },
+   {
+    "t": "2026-09-01",
+    "population": 18372,
+    "CONFIRMED": 13,
+    "INFERRED_R12": 0,
+    "INFERRED_R3": 1396,
+    "OPEN_PROFILE": 11341,
+    "OPEN": 5607,
+    "NONE": 15,
+    "registration_overlap_players": 295,
+    "planned_due_open": 2016
+   }
+  ]
+ }
+}

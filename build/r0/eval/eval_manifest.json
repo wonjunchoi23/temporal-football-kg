@@ -1,0 +1,10 @@
+{
+ "lag_days": 14,
+ "a_max": 34,
+ "seed": 20261012,
+ "qa_n": 1000,
+ "segments": 160027,
+ "gold_segments": 135930,
+ "verification_rows": 400,
+ "note": "QA size and strata are defaults; final sizes are fixed in the evaluation phase. popularity_stratum is a placeholder (kg-schema \u00a714)."
+}

@@ -1,0 +1,791 @@
+{
+ "dataset": "final_v3",
+ "files": {
+  "edges/AT__Spell__CareerStatus.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 2758,
+   "sha256": "6cf8a03cc659cc4defea6be39fd916fac892f40544468c01dc80271d1dfd4989"
+  },
+  "edges/AT__Spell__Club.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 110621,
+   "sha256": "83fa4f11ed936683fe685d67374debc64011d42d3e7598c74f406ef18fa5db72"
+  },
+  "edges/CITIZEN_OF__Player__Country.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40706,
+   "sha256": "cb8e332e7e6727e06011b535b501fd25bf09884382e5fdc9c2f036efcb6ce08d"
+  },
+  "edges/ENDED_BY__Spell__TransferEvent.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "basis",
+    "derivation",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 92956,
+   "sha256": "ce90e06f1091125340043f55febbe30a3b7305c696aab2f9e90233e873b2dcd2"
+  },
+  "edges/FOR_PLAYER__TransferEvent__Player.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 137776,
+   "sha256": "1ef07f0f950a85ee4edda17bbc28548449c8111dfe0000499e5a2deebca0ca52"
+  },
+  "edges/FROM__TransferEvent__CareerStatus.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 2444,
+   "sha256": "14c93476ba8fd271ca1d9a0ea5cc8306e1bb2588584f496e322e50b31548d798"
+  },
+  "edges/FROM__TransferEvent__Club.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 135332,
+   "sha256": "18f4514382bbab5af4473a6952504a7f9ac99a40957b2218e371483e6f9b9c9d"
+  },
+  "edges/HAS_CLAIM__Player__ProfileClaim.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40706,
+   "sha256": "4c2a74e3abe1e4bade31c153c161d254bff183f22ae37ce4ba3214b82c882be6"
+  },
+  "edges/HAS_POSITION__Player__Position.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40238,
+   "sha256": "18d035113e8089b00761b89cbc3c6e8d85bcefa803ac74f2229ccc14f714171b"
+  },
+  "edges/HAS_SPELL__Club__LeagueSpell.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 796,
+   "sha256": "877d8bdb44227dd3bea284f1cd14944367ffb4411f22096459af9b42010c5848"
+  },
+  "edges/HAS_SPELL__Player__Spell.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 113379,
+   "sha256": "50d5210f967ba0f8b96127cc53209d5c229bb04be4bb65154bba59db4838192a"
+  },
+  "edges/IN_COUNTRY__League__Country.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 32,
+   "sha256": "336d954f5afd7eb28212fdbc21461c1a035d04dfdcabfc8ae2e4957426b8cf97"
+  },
+  "edges/IN__LeagueSpell__League.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 796,
+   "sha256": "a35518f37aa7b2cac61d8c0915dab45b4f2364268de2a17f8a117aa01f010248"
+  },
+  "edges/LOANED_FROM__Spell__Club.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 23544,
+   "sha256": "23325f17a38bd5191bf4b6bd29e52e04e14dfbfb3b7ef9dde3934b5f3566e9c6"
+  },
+  "edges/POINTS_TO__ProfileClaim__CareerStatus.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 6,
+   "sha256": "a1bc3b83e7b515d7ca2fd82db2ca2fbc3c1c71c773c860b8a75915edef5b0c8c"
+  },
+  "edges/POINTS_TO__ProfileClaim__Club.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40679,
+   "sha256": "ac3b63db26beb8ca20dbe2be778ea4ca0948b3ed7ebf9e2437f60c45ebfb99f8"
+  },
+  "edges/POINTS_TO__ProfileClaim__UnresolvedClub.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 21,
+   "sha256": "dcc404d6275f1cec4a6c6e7738a10aff8d59c49fe37f3996bf9c613a1aca66a7"
+  },
+  "edges/RECORDED_IN__LeagueSpell__Revision.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 796,
+   "sha256": "8e713f1290603747982b8b98221e7903015300bcda47eaeb949842359ab43605"
+  },
+  "edges/RECORDED_IN__ProfileClaim__Revision.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40706,
+   "sha256": "42f0f5fec7851d86cb59b2c95225ef646baffd3238f2a1bd293ca70306f99d5c"
+  },
+  "edges/RECORDED_IN__Spell__Revision.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 113379,
+   "sha256": "0fac0cb60f4ff349e28bd540edfa4ed2be965d8eb031241160e39f112fb65941"
+  },
+  "edges/RECORDED_IN__TransferEvent__Revision.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 137776,
+   "sha256": "75bf5c5af166402363a3a694e1b5606d3a4ee9e88283fed1759128c04ac39a94"
+  },
+  "edges/STARTED_BY__Spell__TransferEvent.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 113379,
+   "sha256": "22d3f62901d9749e98e131b56b5ca9686c39d3c45389126f8424d2c408ecd94d"
+  },
+  "edges/SUPPORTED_BY__CareerStatus__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 5,
+   "sha256": "38d39686d95d02bdcf27c1c981b762f184322fca45487169f8dd37a40ee4c6b8"
+  },
+  "edges/SUPPORTED_BY__Club__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 14395,
+   "sha256": "9df6d6a9481e6e0c404e6735f68b3b41c5f63975e63f83c059201b13686ab4c2"
+  },
+  "edges/SUPPORTED_BY__LeagueSpell__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 796,
+   "sha256": "3947b3cbf7e97629243828320fe2ea7e822ef7901baaccf288ccabadd2e6a04e"
+  },
+  "edges/SUPPORTED_BY__League__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 159,
+   "sha256": "4dde5edc9a5f7a4a9e42fb52bea2a6b22f8dc520ad4cf7ad67077429147fdace"
+  },
+  "edges/SUPPORTED_BY__Player__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 357698,
+   "sha256": "1ab5bd037aaf3041ecdd4a758cbce54b872d089af03f4081e53b1768798fda21"
+  },
+  "edges/SUPPORTED_BY__Position__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40238,
+   "sha256": "cdf5f40e1d4ad278116f9d849571be6f2938700bb605b725f780a08574046a67"
+  },
+  "edges/SUPPORTED_BY__ProfileClaim__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 40706,
+   "sha256": "37b81d6e57627ab390a04828fe6ac861719b2bd5db81a56bd6bcd9ca634e2969"
+  },
+  "edges/SUPPORTED_BY__Spell__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 240508,
+   "sha256": "7fb438e3f69c030b2716f13e6da43d35d4372ced707e9edc32060b96f2312248"
+  },
+  "edges/SUPPORTED_BY__TransferEvent__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 828842,
+   "sha256": "2fca3551f1bc7a181cdfe4c0d06d8e1ec065305839bd5c4241b1972d7290fe39"
+  },
+  "edges/SUPPORTED_BY__UnresolvedClub__Source.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "fact_name",
+    "derivation",
+    "orig_entity_type",
+    "orig_entity_id",
+    "provenance_status",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 9,
+   "sha256": "831ce912512e0fc74403f5428d2034d1cb0873a6ef65b417504b19c33145ac91"
+  },
+  "edges/TO__TransferEvent__CareerStatus.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 3326,
+   "sha256": "787c7762b7d58d977b4f07292f5105d4d55d106cfacbe419b1dad91a19c8c553"
+  },
+  "edges/TO__TransferEvent__Club.parquet": {
+   "columns": [
+    "src_label",
+    "src",
+    "dst_label",
+    "dst",
+    "tx_from",
+    "tx_to"
+   ],
+   "rows": 134450,
+   "sha256": "f04d36509422c978d6f54f86ee47925c18784eb3a0efce6c0417fd1477953c06"
+  },
+  "nodes/CareerStatus.parquet": {
+   "columns": [
+    "club_id",
+    "code",
+    "name",
+    "is_career_status",
+    "metadata_status",
+    "source_url"
+   ],
+   "rows": 5,
+   "sha256": "1daacaad195472ad4d110c72e81b6238b7001e54d2281658a910aa23fe626654"
+  },
+  "nodes/Club.parquet": {
+   "columns": [
+    "club_id",
+    "name",
+    "name_scope",
+    "metadata_status",
+    "aliases",
+    "source_url",
+    "team_level",
+    "team_level_token",
+    "team_level_basis"
+   ],
+   "rows": 13599,
+   "sha256": "15333846a9a0d18e4ee2fc1bbde06c51f41fedfd56c4f31babac8a9142df9327"
+  },
+  "nodes/Country.parquet": {
+   "columns": [
+    "name",
+    "aliases",
+    "fifa_name",
+    "fifa_rank",
+    "is_top50",
+    "players_in_release"
+   ],
+   "rows": 53,
+   "sha256": "78bd8a04acfce748490baae8199d91f0a03f5edf6b62cc1be5ca168a120407c9"
+  },
+  "nodes/League.parquet": {
+   "columns": [
+    "league_id",
+    "name",
+    "country_id",
+    "country_name",
+    "competition_type",
+    "competition_sub_type",
+    "metadata_status",
+    "source_url"
+   ],
+   "rows": 32,
+   "sha256": "1ea5db305a680cc2a7c790d14f783d354651e5c8bcb451c668afa64dec799e24"
+  },
+  "nodes/LeagueSpell.parquet": {
+   "columns": [
+    "uid",
+    "league_spell_id",
+    "version",
+    "tx_from",
+    "tx_to",
+    "revision_id",
+    "club_id",
+    "league_id",
+    "valid_from",
+    "valid_to",
+    "observed_at",
+    "basis",
+    "source_url"
+   ],
+   "rows": 796,
+   "sha256": "f8b71976da5f3ecdfa70fefe213b770735fca999afe4f4852dd10261b86edd0d"
+  },
+  "nodes/Player.parquet": {
+   "columns": [
+    "player_id",
+    "name",
+    "birth_date",
+    "birth_date_precision",
+    "birth_date_floor",
+    "birth_city",
+    "birth_country",
+    "citizenship_label",
+    "source_url",
+    "history_coverage",
+    "history_source_type",
+    "history_source",
+    "raw_transfer_event_count",
+    "curated_transfer_event_count",
+    "history_source_label",
+    "history_observed_at",
+    "history_observed_at_basis",
+    "history_complete",
+    "history_record_source_id"
+   ],
+   "rows": 40706,
+   "sha256": "32ed0cad9046975daca5cc8097c2e0b1b3c25178ac8d30311e2bacbaf01990f3"
+  },
+  "nodes/Position.parquet": {
+   "columns": [
+    "position_id",
+    "position",
+    "sub_position"
+   ],
+   "rows": 13,
+   "sha256": "2a95eb5c99438f2bea1206ba38c002ff0bc1e37476919c987eb568e3a558c513"
+  },
+  "nodes/ProfileClaim.parquet": {
+   "columns": [
+    "uid",
+    "current_relation_id",
+    "version",
+    "tx_from",
+    "tx_to",
+    "revision_id",
+    "player_id",
+    "target_id",
+    "target_kind",
+    "relation_kind",
+    "temporal_scope",
+    "observed_at",
+    "observed_before",
+    "stale",
+    "source_url",
+    "source_id"
+   ],
+   "rows": 40706,
+   "sha256": "3402c5bfaa68cc9fb5dd66bd8be6a7ce1029bddbb9e6a7719d8b65c7e8b7e557"
+  },
+  "nodes/Revision.parquet": {
+   "columns": [
+    "revision_id",
+    "ordinal",
+    "recorded_at",
+    "source_as_of",
+    "origin",
+    "operation",
+    "parent_revision_id",
+    "input_sha256",
+    "input_row_counts",
+    "code_version",
+    "parameters"
+   ],
+   "rows": 1,
+   "sha256": "391ebf87d5503d5e2220e3443144a9458077addbc5f52ba41e62b59a728c4800"
+  },
+  "nodes/Source.parquet": {
+   "columns": [
+    "source_id",
+    "source_type",
+    "url",
+    "raw_locator",
+    "retrieved_at",
+    "content_sha256",
+    "extraction_method",
+    "referenced"
+   ],
+   "rows": 365128,
+   "sha256": "6b8f0b8840f40351c13f7db9d9f2f15ff14d21ff7c44263dc286661eaedbeec1"
+  },
+  "nodes/Spell.parquet": {
+   "columns": [
+    "uid",
+    "spell_id",
+    "version",
+    "tx_from",
+    "tx_to",
+    "revision_id",
+    "player_id",
+    "at_id",
+    "at_kind",
+    "type",
+    "status_code",
+    "loaned_from_id",
+    "valid_from",
+    "source_end_date",
+    "start_event_id",
+    "evidence_end_event_id",
+    "evidence_end_method",
+    "origin",
+    "season",
+    "membership_derivation_method",
+    "confidence_status",
+    "start_source_id",
+    "end_source_id",
+    "start_seq",
+    "end_basis",
+    "end_derivation",
+    "valid_to",
+    "end_event_id",
+    "end_seq",
+    "transit",
+    "last_confirmed_at",
+    "last_confirmed_event_id",
+    "last_confirmed_basis",
+    "conflicting",
+    "record_status"
+   ],
+   "rows": 113379,
+   "sha256": "c959daa6906d0b413a98809a32952fdfd3233808addaeebbf73c2e065e8a4534"
+  },
+  "nodes/TransferEvent.parquet": {
+   "columns": [
+    "uid",
+    "transfer_event_id",
+    "version",
+    "tx_from",
+    "tx_to",
+    "revision_id",
+    "player_id",
+    "date",
+    "date_precision",
+    "season",
+    "from_club_id",
+    "from_club_name",
+    "to_club_id",
+    "to_club_name",
+    "fee_curated",
+    "upstream_membership_type",
+    "source_locator",
+    "transfer_id",
+    "transfer_url",
+    "fee_raw",
+    "event_type",
+    "normalized_membership_type",
+    "source_supported_membership_type",
+    "derived_membership_type",
+    "classification_rule",
+    "raw_source_type",
+    "raw_source_file",
+    "raw_match_status",
+    "raw_source_id",
+    "raw_event_id",
+    "raw_event_locator",
+    "raw_source_sha256",
+    "fee_json",
+    "raw_from_is_special",
+    "raw_to_is_special",
+    "raw_from_club_name",
+    "raw_to_club_name",
+    "raw_from_href",
+    "raw_to_href",
+    "temporal_status",
+    "raw_future_transfer",
+    "raw_upcoming",
+    "temporal_classification_rule",
+    "temporal_as_of_date",
+    "fee_eur",
+    "from_kind",
+    "to_kind",
+    "in_planned_table",
+    "pointer_index",
+    "order_in_day",
+    "seq"
+   ],
+   "rows": 137776,
+   "sha256": "4aa306a3479d8a192e7c2fe79ecb46982d7ceb6c298c56dfea636d5b5322d0d7"
+  },
+  "nodes/UnresolvedClub.parquet": {
+   "columns": [
+    "club_id",
+    "metadata_status"
+   ],
+   "rows": 9,
+   "sha256": "ecd17dd729a89ee3505f8131bd07195ee0f8498780c155d0f121cd5abbb9241a"
+  },
+  "tables/conflicts.parquet": {
+   "columns": [
+    "conflict_id",
+    "revision_id",
+    "type",
+    "player_id",
+    "node_uids",
+    "interval_from",
+    "interval_to",
+    "detail"
+   ],
+   "rows": 6962,
+   "sha256": "447107c7a9dc2923d033d618dd332f6b2dbdf33bf0980d5da11157dab9cfa7c7"
+  },
+  "tables/membership_derivation_issues.parquet": {
+   "columns": [
+    "transfer_event_id",
+    "player_id",
+    "issue",
+    "date",
+    "membership_ids"
+   ],
+   "rows": 704,
+   "sha256": "d371c191aeca5c467f23672d93df7ad43b803b438805af4e02c002ff6c8d505f"
+  },
+  "tables/player_observation.parquet": {
+   "columns": [
+    "player_id",
+    "history_coverage",
+    "history_source",
+    "history_source_type",
+    "history_source_label",
+    "history_observed_at",
+    "history_observed_at_basis",
+    "history_complete",
+    "history_record_source_id",
+    "raw_transfer_event_count",
+    "curated_transfer_event_count",
+    "version",
+    "tx_from",
+    "tx_to",
+    "revision_id"
+   ],
+   "rows": 40706,
+   "sha256": "4c1359bf9b639bbb717203646163dca2d3a11c8492bd48af0d43dd2806f6ef07"
+  },
+  "tables/revision_log.parquet": {
+   "columns": [
+    "revision_id",
+    "operation",
+    "label",
+    "key",
+    "attribute",
+    "old_value",
+    "new_value",
+    "detail"
+   ],
+   "rows": 0,
+   "sha256": "2771e77bbc3697b99c269f33c82436a9b948185f3575360bb3a1b5228a6226bb"
+  }
+ },
+ "revision_id": "r0"
+}

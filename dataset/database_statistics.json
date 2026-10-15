@@ -1,0 +1,472 @@
+{
+  "database_version": "final_v3",
+  "canonical_database_path": "data/top50/final_v3/",
+  "release_as_of_date": "2026-10-08",
+  "fifa_top50_ranking_snapshot_date": "2026-10-07",
+  "fifa_country_count": 50,
+  "ranking_source": "user_supplied_snapshot_not_externally_reverified",
+  "players": 40706,
+  "transfer_events": 137776,
+  "historical_memberships": 110621,
+  "current_club_references": 40706,
+  "clubs": 13613,
+  "leagues": 32,
+  "positions": 13,
+  "permanent_memberships": 26996,
+  "loan_memberships": 23547,
+  "unknown_memberships": 60078,
+  "valid_nonempty_transfer_histories": 19190,
+  "valid_empty_transfer_histories": 40,
+  "unavailable_transfer_histories": 21476,
+  "source_documents": 365128,
+  "fact_source_links": 1462416,
+  "planned_transfer_events": 2562,
+  "event_temporal_status_counts": {
+    "completed": 135120,
+    "planned": 2562,
+    "unknown": 94
+  },
+  "event_type_counts": {
+    "unknown": 46189,
+    "loan_return": 23505,
+    "loan": 23559,
+    "paid_transfer": 14262,
+    "free_transfer": 27224,
+    "without_club": 2845,
+    "retired": 155,
+    "career_break": 37
+  },
+  "membership_type_counts": {
+    "loan": 23547,
+    "unknown": 60078,
+    "permanent": 26996
+  },
+  "memberships_with_known_end_dates": 45403,
+  "loan_memberships_closed_by_loan_return": 21465,
+  "memberships_with_exact_start_dates": 110621,
+  "unresolved_provenance_facts": 0,
+  "table_row_counts": {
+    "club_league_current": 796,
+    "clubs": 13613,
+    "fact_sources": 1462416,
+    "leagues": 32,
+    "planned_transfer_events": 2562,
+    "player_club_memberships": 110621,
+    "player_current_clubs": 40706,
+    "player_positions": 40238,
+    "player_transfer_history_status": 40706,
+    "players": 40706,
+    "positions": 13,
+    "source_documents": 365128,
+    "transfer_events": 137776
+  },
+  "country_counts": [
+    {
+      "fifa_rank": 1,
+      "fifa_country": "Spain",
+      "citizenship_labels": [
+        "Spain"
+      ],
+      "players": 2289
+    },
+    {
+      "fifa_rank": 2,
+      "fifa_country": "Argentina",
+      "citizenship_labels": [
+        "Argentina"
+      ],
+      "players": 1750
+    },
+    {
+      "fifa_rank": 3,
+      "fifa_country": "France",
+      "citizenship_labels": [
+        "France"
+      ],
+      "players": 1974
+    },
+    {
+      "fifa_rank": 4,
+      "fifa_country": "England",
+      "citizenship_labels": [
+        "England"
+      ],
+      "players": 1762
+    },
+    {
+      "fifa_rank": 5,
+      "fifa_country": "Portugal",
+      "citizenship_labels": [
+        "Portugal"
+      ],
+      "players": 1295
+    },
+    {
+      "fifa_rank": 6,
+      "fifa_country": "Brazil",
+      "citizenship_labels": [
+        "Brazil"
+      ],
+      "players": 2736
+    },
+    {
+      "fifa_rank": 7,
+      "fifa_country": "Morocco",
+      "citizenship_labels": [
+        "Morocco"
+      ],
+      "players": 379
+    },
+    {
+      "fifa_rank": 8,
+      "fifa_country": "Belgium",
+      "citizenship_labels": [
+        "Belgium"
+      ],
+      "players": 1234
+    },
+    {
+      "fifa_rank": 9,
+      "fifa_country": "Netherlands",
+      "citizenship_labels": [
+        "Netherlands"
+      ],
+      "players": 1626
+    },
+    {
+      "fifa_rank": 10,
+      "fifa_country": "Mexico",
+      "citizenship_labels": [
+        "Mexico"
+      ],
+      "players": 624
+    },
+    {
+      "fifa_rank": 11,
+      "fifa_country": "Colombia",
+      "citizenship_labels": [
+        "Colombia"
+      ],
+      "players": 975
+    },
+    {
+      "fifa_rank": 12,
+      "fifa_country": "Switzerland",
+      "citizenship_labels": [
+        "Switzerland"
+      ],
+      "players": 438
+    },
+    {
+      "fifa_rank": 13,
+      "fifa_country": "Germany",
+      "citizenship_labels": [
+        "Germany"
+      ],
+      "players": 1484
+    },
+    {
+      "fifa_rank": 14,
+      "fifa_country": "Croatia",
+      "citizenship_labels": [
+        "Croatia"
+      ],
+      "players": 643
+    },
+    {
+      "fifa_rank": 15,
+      "fifa_country": "Italy",
+      "citizenship_labels": [
+        "Italy"
+      ],
+      "players": 2075
+    },
+    {
+      "fifa_rank": 16,
+      "fifa_country": "USA",
+      "citizenship_labels": [
+        "United States"
+      ],
+      "players": 624
+    },
+    {
+      "fifa_rank": 17,
+      "fifa_country": "Japan",
+      "citizenship_labels": [
+        "Japan"
+      ],
+      "players": 940
+    },
+    {
+      "fifa_rank": 18,
+      "fifa_country": "Senegal",
+      "citizenship_labels": [
+        "Senegal"
+      ],
+      "players": 435
+    },
+    {
+      "fifa_rank": 19,
+      "fifa_country": "Norway",
+      "citizenship_labels": [
+        "Norway"
+      ],
+      "players": 570
+    },
+    {
+      "fifa_rank": 20,
+      "fifa_country": "Uruguay",
+      "citizenship_labels": [
+        "Uruguay"
+      ],
+      "players": 343
+    },
+    {
+      "fifa_rank": 21,
+      "fifa_country": "Denmark",
+      "citizenship_labels": [
+        "Denmark"
+      ],
+      "players": 1229
+    },
+    {
+      "fifa_rank": 22,
+      "fifa_country": "Austria",
+      "citizenship_labels": [
+        "Austria"
+      ],
+      "players": 438
+    },
+    {
+      "fifa_rank": 23,
+      "fifa_country": "IR Iran",
+      "citizenship_labels": [
+        "Iran"
+      ],
+      "players": 66
+    },
+    {
+      "fifa_rank": 24,
+      "fifa_country": "Ecuador",
+      "citizenship_labels": [
+        "Ecuador"
+      ],
+      "players": 112
+    },
+    {
+      "fifa_rank": 25,
+      "fifa_country": "Egypt",
+      "citizenship_labels": [
+        "Egypt"
+      ],
+      "players": 108
+    },
+    {
+      "fifa_rank": 26,
+      "fifa_country": "Australia",
+      "citizenship_labels": [
+        "Australia"
+      ],
+      "players": 478
+    },
+    {
+      "fifa_rank": 27,
+      "fifa_country": "Canada",
+      "citizenship_labels": [
+        "Canada"
+      ],
+      "players": 139
+    },
+    {
+      "fifa_rank": 28,
+      "fifa_country": "Algeria",
+      "citizenship_labels": [
+        "Algeria"
+      ],
+      "players": 228
+    },
+    {
+      "fifa_rank": 29,
+      "fifa_country": "Côte d'Ivoire",
+      "citizenship_labels": [
+        "Cote d'Ivoire"
+      ],
+      "players": 341
+    },
+    {
+      "fifa_rank": 30,
+      "fifa_country": "Nigeria",
+      "citizenship_labels": [
+        "Nigeria"
+      ],
+      "players": 537
+    },
+    {
+      "fifa_rank": 31,
+      "fifa_country": "Türkiye",
+      "citizenship_labels": [
+        "Turkey",
+        "Türkiye"
+      ],
+      "players": 2299
+    },
+    {
+      "fifa_rank": 32,
+      "fifa_country": "Korea Republic",
+      "citizenship_labels": [
+        "Korea, South"
+      ],
+      "players": 619
+    },
+    {
+      "fifa_rank": 33,
+      "fifa_country": "Paraguay",
+      "citizenship_labels": [
+        "Paraguay"
+      ],
+      "players": 155
+    },
+    {
+      "fifa_rank": 34,
+      "fifa_country": "Sweden",
+      "citizenship_labels": [
+        "Sweden"
+      ],
+      "players": 777
+    },
+    {
+      "fifa_rank": 35,
+      "fifa_country": "Russia",
+      "citizenship_labels": [
+        "Russia"
+      ],
+      "players": 1643
+    },
+    {
+      "fifa_rank": 36,
+      "fifa_country": "Ukraine",
+      "citizenship_labels": [
+        "Ukraine"
+      ],
+      "players": 1722
+    },
+    {
+      "fifa_rank": 37,
+      "fifa_country": "Poland",
+      "citizenship_labels": [
+        "Poland"
+      ],
+      "players": 681
+    },
+    {
+      "fifa_rank": 38,
+      "fifa_country": "Hungary",
+      "citizenship_labels": [
+        "Hungary"
+      ],
+      "players": 143
+    },
+    {
+      "fifa_rank": 39,
+      "fifa_country": "Wales",
+      "citizenship_labels": [
+        "Wales"
+      ],
+      "players": 162
+    },
+    {
+      "fifa_rank": 40,
+      "fifa_country": "Congo DR",
+      "citizenship_labels": [
+        "DR Congo"
+      ],
+      "players": 181
+    },
+    {
+      "fifa_rank": 41,
+      "fifa_country": "Greece",
+      "citizenship_labels": [
+        "Greece"
+      ],
+      "players": 1327
+    },
+    {
+      "fifa_rank": 42,
+      "fifa_country": "Cameroon",
+      "citizenship_labels": [
+        "Cameroon"
+      ],
+      "players": 249
+    },
+    {
+      "fifa_rank": 43,
+      "fifa_country": "Scotland",
+      "citizenship_labels": [
+        "Scotland"
+      ],
+      "players": 1061
+    },
+    {
+      "fifa_rank": 44,
+      "fifa_country": "Serbia",
+      "citizenship_labels": [
+        "Serbia"
+      ],
+      "players": 948
+    },
+    {
+      "fifa_rank": 45,
+      "fifa_country": "Slovakia",
+      "citizenship_labels": [
+        "Slovakia"
+      ],
+      "players": 194
+    },
+    {
+      "fifa_rank": 46,
+      "fifa_country": "Panama",
+      "citizenship_labels": [
+        "Panama"
+      ],
+      "players": 67
+    },
+    {
+      "fifa_rank": 47,
+      "fifa_country": "Mali",
+      "citizenship_labels": [
+        "Mali"
+      ],
+      "players": 188
+    },
+    {
+      "fifa_rank": 48,
+      "fifa_country": "South Africa",
+      "citizenship_labels": [
+        "South Africa"
+      ],
+      "players": 131
+    },
+    {
+      "fifa_rank": 49,
+      "fifa_country": "Venezuela",
+      "citizenship_labels": [
+        "Venezuela"
+      ],
+      "players": 143
+    },
+    {
+      "fifa_rank": 50,
+      "fifa_country": "Chile",
+      "citizenship_labels": [
+        "Chile"
+      ],
+      "players": 144
+    }
+  ],
+  "planned_events_allowed_in_historical_memberships": false,
+  "paid_transfer_semantic_rule_used": false,
+  "secondary_citizenship_included": false,
+  "external_requests_made": 0,
+  "documented_columns": 131,
+  "checksummed_csv_count": 14
+}

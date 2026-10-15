@@ -1,0 +1,36 @@
+# Data-and-docs upload: only the dataset, the KG and the documentation are shared.
+# Everything at the top level is ignored, then the shared paths are re-included.
+# Code (src/, tests/, reference/, pyproject.toml) and CLAUDE.md stay local.
+/*
+!/.gitignore
+!/README.md
+!/kg-schema.md
+!/dataset-description.md
+!/docs/
+!/dataset-gz/
+
+# dataset/: documentation and checksums only. The raw CSVs exceed GitHub's limits (two are over
+# 100 MB); their gzip copies are in dataset-gz/.
+!/dataset/
+/dataset/*
+!/dataset/README.md
+!/dataset/schema.md
+!/dataset/data_dictionary.csv
+!/dataset/database_statistics.json
+!/dataset/build_manifest.json
+!/dataset/SHA256SUMS
+
+# build/: revision r0 only — the KG, its reports and the evaluation material.
+!/build/
+/build/*
+!/build/r0/
+/build/r0/*
+!/build/r0/kg/
+!/build/r0/reports/
+!/build/r0/eval/
+
+# Python caches anywhere
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
